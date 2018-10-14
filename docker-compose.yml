@@ -11,7 +11,7 @@ services:
       "npm run start"
 
   nginx:
-    image: nginx:1.13
+    image: nginx:latest
     container_name: vuevixens-nginx
     ports:
       - "80:80"
@@ -19,12 +19,3 @@ services:
       - ./nginx:/etc/nginx/conf.d
     depends_on:
       - nuxt
-
-  portainer:
-    image: portainer/portainer
-    ports:
-      - "9000:9000"
-    command: -H unix:///var/run/docker.sock
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
