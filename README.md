@@ -6,7 +6,7 @@ An awesome Nuxt SSR Website + Docker 🐳
 
 ## Docker Instructions
 
-Provided you have correctly installed Docker, Docker Machine & Docker-Compose clone this repo and read below!
+Provided you have correctly installed Docker & Docker-Compose clone this repo and read below!
 
 
 ## Build, Run and Have Fun! 💅
