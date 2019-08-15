@@ -55,6 +55,29 @@ module.exports = {
 			},
 		],
 	},
+	generate: {
+		// hardcoded temp fix so that dynamic pages for events are generated
+		routes: [
+			'/events/componentsconf2019',
+			'/events/vue-vixens-web-zuerich',
+			'/events/vue-london-2019',
+			'/events/ato-2019',
+			'/events/connect-tech-2019',
+			'/events/scriptcon19',
+			'/events/vue-toronto-2019'
+		]
+		// This should be dynamic - get slugs from storyblok and map over the response
+		// and for each slug return an /events/ plus slug
+
+		// routes: function () {
+		// 	return axios.get('https://storyblok/story.slug')
+		// 		.then((res) => {
+		// 			return res.data.map((slug) => {
+		// 				return '/events/' + slug
+		// 			})
+		// 		})
+		// }
+	},
 	plugins: ['~/plugins/vuetify', '~/plugins/eventBus.js', '~/plugins/i18n.js', '~/plugins/vue-moment.js'],
 	css: ['~/assets/css/app.styl', '~/assets/css/main.scss', 'flag-icon-css/css/flag-icon.min.css'],
 	modules: [
